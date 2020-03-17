@@ -1,6 +1,8 @@
 #!/usr/bin/perl -w
 use strict;
 
+# Xinhai Ye, yexinhai@zju.edu.cn
+
 #用法：perl 程序.pl all.pep.fasta all.cds.fasta 1_1_group_pair.txt
 #读所有物种的序列；
 
@@ -103,39 +105,6 @@ while (<$Group>) {
 	}
 	close OUT4;
 	`cp $group\.kaks.result ..\/..\/kaks_result`;
-#	`cp ..\/wasp.tree $group\/for_paml`;
-#	`mkdir $group\/for_paml\/null`;
-#	`cp ..\/Null.ctl $group\/for_paml\/null`;
-#	`mkdir $group\/for_paml\/alter`;
-#	`cp ..\/Alter.ctl $group\/for_paml\/alter`;
-#	chdir "$group\/for_paml\/null";
-#	print "$group\:Start PAML for Null!\n";
-#	`codeml Null.ctl`;
-#	print "$group\:PAML for Null DONE!\n";
-#	open my $null_mlc, "<", "mlc" or die "can't open null mlc file in $group !\n";
-#	open OUT4, ">", "$group\.null.result";
-#	while (<$null_mlc>) {
-#		chomp();
-#		if (/^lnL.*np:\s(\d+)\):\s+(\S+).*/) {
-#			print OUT4 $group."\t".$1."\t".$2."\t";
-#		} 
-#	}
-#	close OUT4;
-#	`cp $group\.null.result ..\/..\/..\/paml_result`;
-#	chdir "..\/alter";
-#	print "$group\:Start PAML for Alter!\n";
-#	`codeml Alter.ctl`;
-#	print "$group\:PAML for Alter DONE!\n";
-#	open my $alter_mlc, "<", "mlc" or die "can't open alter mlc file in $group!\n";
-#	open OUT5, ">", "$group\.alter.result";
-#	while (<$alter_mlc>) {
-#		chomp();
-#		if (/^lnL.*np:\s(\d+)\):\s+(\S+).*/) {
-#			print OUT5 $group."\t".$1."\t".$2."\n";
-#		} 
-#	}
-#	close OUT5;
-#	`cp $group\.alter.result ..\/..\/..\/paml_result`;
 	print "where is next!?\n";
 	chdir "..\/..\/";
 }
