@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+# Xinhai Ye, yexinhai@zju.edu.cn
+
 from sys import argv
 
 with open(argv[1]) as singlecopylist:
